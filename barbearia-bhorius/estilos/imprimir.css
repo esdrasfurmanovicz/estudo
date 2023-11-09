@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+*{
+    box-shadow: none;
+}
+header{display: none;}
+footer{display: none;}
+aside{display: none;}
+img{display: none;}
+.sobre img{
+    display: none;
+}
+strong, em{
+    color: black;
+    font-weight: bolder;
+}
+button{display: none;}
+.landing div{
+    color: black;
+}
+main::after{
+    content: '© Bhorius corp.';
+}

@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* historia */
+
+.historia{
+    position: relative;
+    max-width: 70vw;
+    padding: 40px;
+}
+.historia::before{
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.468);
+    width: 2px;
+}
+.historia ul li{
+    position: relative;
+    width: 50%;
+    list-style-type: none;
+    padding: 20px 40px;
+}
+.historia li:nth-child(odd){
+    clear: both;
+    float: left;
+    text-align: right;
+}
+.historia li:nth-child(even){
+    clear: both;
+    float: right;
+    text-align: left;
+}
+.historia li:nth-child(odd)::before{
+    content: ' ';
+    position: absolute;
+    right: -6px;
+    top: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(120, 66, 66, 1);
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 3px rgba(120, 66, 66, 0.2);
+}
+.historia li:nth-child(even)::before{
+    content: ' ';
+    position: absolute;
+    left: -6px;
+    top: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(120, 66, 66, 1);
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 3px rgba(120, 66, 66, 0.2);
+}
+.historia li:nth-child(odd) .data{
+    position: absolute;
+    top: 10%;
+    right: -80%;
+    transform: rotate(350deg);
+    box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.459);
+}
+.historia li:nth-child(even) .data{
+    position: absolute;
+    top: 10%;
+    left: -80%;
+    transform: rotate(10deg);
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.459);
+}
+.data img{
+    width: auto;
+    margin: 0px;
+}
+
+/* pq */
+
+aside{
+    max-width: 70vw;
+}
+aside ul{
+    columns: 2;
+}

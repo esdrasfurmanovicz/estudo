@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="É a barbearia perfeita para aqueles que querem inovar no visual, temos serviços para toda a familia!">
+    <title>Barbearia Bhorius</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/Home/home.css">
+    <link rel="stylesheet" href="estilos/Home/desktop.css" media="screen and (min-width: 992px)">
+    <link rel="stylesheet" href="estilos/imprimir.css" media="print">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Cabeçalho e navegação da barbearia-->
+    <header>
+        <img src="imagens/logo-bhorius.png" alt="">
+        <nav>
+            <input type="checkbox" name="toggler" id="toggler">
+                <label for="toggler"><span class="material-symbols-outlined">
+                    menu
+                    </span></label>
+                <div class="menu">
+            <ul>
+                <li><a href="index.html" target="_self" rel="prev">Inicio</a></li>
+                <li><a href="sobre.html" target="_self" rel="next">Sobre</a></li>
+                <li><a href="produtos.html" target="_self" rel="next">Produtos</a></li>
+                <li><a href="https://github.com/esdrasfurmanovicz">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Landing Page e apresentação -->
+    <main>
+        <article class="landing">
+            <div>
+                <h1>O melhor corte para o seu estilo!</h1>
+                <p>Sinta-se confiante e renovado com nossos cortes de cabelo e barba personalizados, <br> feitos por profissionais experientes e apaixonados pela arte da barbearia. <br> Descubra uma experiência única de cuidados pessoais em nossa barbearia acolhedora <br> e moderna. Venha para a Barbearia Bhorius e saia com um visual incrível.</p>
+                <button class="agendar"><a href="produtos.html">Agende seu corte</a></button>
+            </div>
+            <img src="imagens/Home/barbearia.png" alt="Barbearia">
+        </article>
+        <article class="sobre">
+            <h2>QUEM <em>SOMOS</em></h2>
+            <div>
+                <img src="imagens//Home/local.jpg" alt="Local da Barbearia Bhorius">
+                <p>A <strong>Barbearia Bhorius</strong> é mais do que apenas um lugar para cortar o cabelo ou fazer a barba. É uma experiência <strong>única</strong> para homens que buscam não só a aparência, mas também a sensação de terem cuidado de si mesmos. Com um ambiente aconchegante e agradável, a Bhorius oferece serviços de alta qualidade, desde cortes de cabelo modernos e estilosos até barbas bem feitas e tratamentos capilares revitalizantes. Os profissionais da <strong>Bhorius</strong> são especializados em cuidar de homens de todas as idades e estilos de vida. <br>
+                O mestre barbeiro, <strong>Jonatas</strong>, é um verdadeiro artista com a tesoura, conhecido por criar cortes exclusivos e sofisticados. A especialista em barbas, <strong>Camila</strong>, é a responsável pelos estilos mais elegantes e cuidadosamente aparados, além de oferecer dicas valiosas sobre cuidados com a barba. A cabeleireira <strong>Alice</strong> é a encarregada dos cortes de cabelo clássicos e atemporais, enquanto a esteticista <strong>Daniel</strong> oferece tratamentos de pele revitalizantes e relaxantes. <br>
+                Na <strong>Bhorius</strong>, o objetivo é oferecer muito mais do que um simples corte de cabelo ou barba. É um momento de relaxamento e cuidado pessoal para homens que se preocupam com a aparência e bem-estar. Com profissionais altamente qualificados e serviços de alta qualidade, a Barbearia Bhorius é uma escolha inteligente para homens que buscam a melhor experiência de cuidados pessoais. <br>
+                Alem de serviços para Barba e Cabelo masculino, nós disponibilizamos serviços femininos como cortes para o cabelo, pintura, sombrancelha e outros. É a barbearia <strong>perfeita</strong> para aqueles que querem inovar no visual, temos serviços para toda a <strong>familia!</strong> Venha conhecer a melhor barbearia da região, além de otimos serviços, é um ambiente agradavel </p>
+            </div>
+        </article>
+        <aside>
+            <div class="tab">
+                <button class="tabbutton" onclick="openTab(event, 'tab1')"><p>Avaliações</p></button>
+                <button class="tabbutton" onclick="openTab(event, 'tab2')"><p>Inspire-se</p></button>
+                <button class="tabbutton" onclick="openTab(event, 'tab3')"><p>Localização</p></button>
+              </div>
+              
+              <div id="tab1" class="tabcontent">
+                <h2>Avaliações</h2>
+                <img src="imagens//Home/five-stars.png" alt="5 estrelas">
+                <div class="comentario">
+                    <h3>Lucas Souza</h3>
+                    <p>Rating: 4.8 &#x2B50 </p> <br>
+                    <p class="pavali">"Fiquei extremamente satisfeito com o atendimento da Barbearia Bhorius. O ambiente é muito aconchegante e a equipe é extremamente profissional. O meu barbeiro, o Bruno, foi muito atencioso e realizou um trabalho incrível no meu corte de cabelo e barba. Ele me deu dicas valiosas sobre como cuidar do meu cabelo e barba, e me deixou muito confortável durante todo o atendimento. Com certeza, voltarei a frequentar a barbearia e recomendo para todos que quiserem uma experiencia profissional."</p>
+                </div>
+                <div class="comentario">
+                    <h3>André Silva</h3>
+                    <p>Rating: 5.0 &#x2B50</p> <br>
+                    <p class="pavali">"Melhor experiencia que eu ja tive com uma barberia, simplesmente incrivel. O meu barbeiro, o Lucas, é um verdadeiro profissional! Ele me ajudou a escolher o melhor corte de cabelo para o meu estilo e me deixou muito confortável durante todo o atendimento. Além disso, ele é muito simpático e atencioso. O ambiente também é muito agradável e aconchegante. Com certeza, voltarei a frequentar essa barbearia e recomendo para todos!"</p>
+                </div>
+                <div class="comentario">
+                    <h3>Rafael Santana</h3>
+                    <p>Rating: 4.6 &#x2B50</p> <br>
+                    <p class="pavali">" O ambiente é muito agradável e os profissionais são extremamente capacitados. O meu barbeiro, o Pedro, foi muito atencioso e realizou um trabalho incrível no meu corte de cabelo e barba. Ele me deu dicas valiosas sobre como cuidar do meu cabelo e barba, e me deixou muito confortável durante todo o atendimento."</p>
+                </div>
+                <div class="comentario">
+                    <h3> Juliana Fernandes</h3>
+                    <p>Rating: 4.7 &#x2B50</p> <br>
+                    <p class="pavali">"A Barbearia Bhorius é simplesmente incrível! O ambiente é muito bonito e aconchegante, e os profissionais são extremamente capacitados. O meu barbeiro, o João, é um verdadeiro artista! Ele me ajudou a escolher o melhor corte de cabelo e me deixou muito à vontade durante todo o atendimento. Além disso, ele é muito simpático e atencioso. Com certeza, recomendo para todos que procuram um serviço de qualidade e um ambiente agradável."</p>
+                </div>
+                <div class="comentario">
+                    <h3>Ana Clara Almeida</h3>
+                    <p>Rating: 4.8 &#x2B50</p> <br>
+                    <p class="pavali">"A Barbearia Bhorius é, sem dúvida, uma das melhores barbearias que já visitei. O ambiente é muito agradável e os profissionais são extremamente capacitados. O meu barbeiro, o Gabriel, foi incrível! Ele me ajudou a escolher o melhor corte de cabelo para o meu rosto e me deixou muito à vontade durante todo o atendimento. Além disso, ele é muito simpático e atencioso."</p>
+                </div>
+              </div>
+              
+              <div id="tab2" class="tabcontent">
+                <div class="galeria">
+                    <img src="imagens/Home/corte-principal-80.jpg" alt="Corte de Cabelo">
+                    <img src="imagens/Home/corte001.jpg" alt="Corte de Cabelo">
+                    <img src="imagens/Home/corte002.jpg" alt="Corte de Cabelo">
+                    <img src="imagens/Home/corte003.jpeg" alt="Corte de Cabelo">
+                </div>
+                <h3>Outros exemplos</h3>
+                <div class="fleximg">
+                    <img src="imagens/Home/corte004.jpg" alt="Corte de Cabelo">
+                    <img src="imagens/Home/corte005.jpg" alt="Corte de Cabelo">
+                    <img src="imagens/Home/corte006.jpg" alt="Corte de Cabelo">
+                    <img src="imagens/Home/corte007.jpg" alt="Corte de Cabelo">
+                </div>
+              </div>
+              
+              <div id="tab3" class="tabcontent">
+                <div class="mapa">
+                    <iframe id="mapa1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4253.706731963386!2d-54.059618666917494!3d-24.55624684072101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3803dd17efe65%3A0x7045632907d0bb71!2sCol%C3%A9gio%20Estadual%20Eron%20Domingues!5e0!3m2!1spt-BR!2sbr!4v1684339663964!5m2!1spt-BR!2sbr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe id="mapa2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4253.706731963386!2d-54.059618666917494!3d-24.55624684072101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3803dd17efe65%3A0x7045632907d0bb71!2sCol%C3%A9gio%20Estadual%20Eron%20Domingues!5e0!3m2!1spt-BR!2sbr!4v1684339663964!5m2!1spt-BR!2sbr" width="768" height="768" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe id="mapa3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4253.706731963386!2d-54.059618666917494!3d-24.55624684072101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3803dd17efe65%3A0x7045632907d0bb71!2sCol%C3%A9gio%20Estadual%20Eron%20Domingues!5e0!3m2!1spt-BR!2sbr!4v1684340218251!5m2!1spt-BR!2sbr" width="992" height="992" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+              
+        </aside>
+    </main>
+    <footer> 
+        <p>Site feito por <a href="https://github.com/esdrasfurmanovicz" target="_blank">Esdras Furmanovicz.</a></p>
+        <p>&#169;Bhorius corp.</p>
+    </footer>
+    <script>
+        // Função para abrir a aba correta
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbutton;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tabbutton = document.getElementsByClassName("tabbutton");
+            for (i = 0; i < tabbutton.length; i++) {
+                tabbutton[i].className = tabbutton[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Abre a primeira aba por padrão
+        document.getElementById("tab1").style.display = "block";
+
+    </script>
+</body>
+</html>
