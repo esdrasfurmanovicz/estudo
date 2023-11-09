@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A hamburgueria HGuhla trás o melhor que um hamburguer pode oferecer, uma explosão de sabores com um gosto de quero mais">
+    <title>HGuhla - Hamburgueria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/style.css"> <!--Mobile First-->
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <div>
+            <img src="imagens/logo.png" alt="Logo HGuhla">
+            <h1>HGuhla</h1>
+        </div>
+        <div>
+            <span id="burger" class="material-symbols-outlined" onclick="clickmenu()">
+                menu
+                </span>
+            <menu id="itens">
+                <ul>
+                    <li><a href="#" target="_blank">Sobre</a></li>
+                    <li><a href="#" target="_blank">Produtos</a></li>
+                    <li><a href="#" target="_blank">Novidades</a></li>
+                    <li><a href="#" target="_blank">Contato</a></li>
+                </ul>
+            </menu>
+            
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Novo HG'BaconTrue</h1>
+            <p>Chegou o mais novo <strong>HG'BaconTrue</strong>, a verdadeira explosão de sabores, <br> sendo desnecessariamente delicioso e te fazendo ir a loucura!</p>
+            <button>Prove agora</button>
+        </section>
+        <img src="imagens/burguer-30.png" alt="Hamburguer">
+        <section id="aside">
+            <h2>Curiosidades</h2>
+            <p>1. O <strong>HG'BaconTrue</strong> foi especialmente planejado meticulosamente pelos maiores chefes de cozinha do <strong>HGuhla</strong></p> 
+            <p>2. Foi avaliado por um dos maiores achefes do mundo e especialista em gastronomia <strong>Maicon Galetrine Vaelie</strong></p> 
+            <p>3. Ele ja está disponivel em todas as lojas do <strong>HGuhla</strong>, sendo disponibilizados em todos os tamanhos para todas as idades, claro todos cabendo no seu bolso</p>
+        </section>
+    </main>
+    <footer>
+        <p>Landing Page criado por <a href="https://github.com/esdrasfurmanovicz" target="_blank">Esdras Furmanovicz</a> para estudos pessoais</p>
+    </footer>
+    <script>
+        function clickmenu(){
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else{
+                itens.style.display = 'block'
+            }
+        }
+        function mudouTamanho(){
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>
