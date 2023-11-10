@@ -11,8 +11,6 @@ body {
 
 main {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
     width: 60%;
     height: 50%;
     border-radius: 25px;
@@ -22,15 +20,24 @@ main {
 
 /* Login */
 .login {
-    padding: 20px;
     width: 50%;
+    padding: 20px;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0px 5px;
     font-family: Agbalumo, sans-serif;
+    font-size: 2.5em;
     /* color: #2ecc71; */
+}
+
+.login p {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 70%;
+    font-size: 1.1em;
 }
 
 /* Fundo / imagem */
@@ -52,9 +59,12 @@ h1 {
     position: static;
     max-width: 240px;
     margin: 10px auto;
-  }
-  
-  .coolinput label.text {
+}
+.coolinput:nth-child(2){
+    margin-bottom: 20px;
+}
+
+.coolinput label.text {
     font-size: 1em;
     color: #000000;
     font-weight: 700;
@@ -64,20 +74,20 @@ h1 {
     padding: 0 3px;
     background: #ffffff;
     width: fit-content;
-  }
-  
-  .coolinput input[type=text].input {
+}
+
+.coolinput input[type=text].input {
     margin: auto;
     padding: 11px 10px;
-    font-size: 0.75rem;
+    font-size: 1em;
     border: 2px #000000 solid;
     border-radius: 5px;
     background: #ffffff;
-  }
-  
-  .coolinput input[type=text].input:focus {
+}
+
+.coolinput input[type=text].input:focus {
     outline: none;
-  }   
+}
 
 /* reset input */
 .form__field:required,
@@ -88,7 +98,7 @@ h1 {
 /* Botões */
 button {
     display: block;
-    margin: auto;
+    margin: 0px auto 10px;
     font-size: 18px;
     color: #2c3e50;
     font-family: inherit;
