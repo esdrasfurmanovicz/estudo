@@ -1,13 +1,26 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Sarala:wght@400;700&family=Young+Serif&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 :root{
+    --fonte-logo: Agbalumo, sans-serif;
+    --fonte-padrao: Sarala, sans-serif;
+    --fonte-destaque: Young Serif, serif;
 
+    --cor01: #0D2738;
+    --cor02: #3B5F78;
+    --cor03: #88A5B8;
+    --cor04: #8C7350;
+    --cor05: #38260D;
+    --cor-destaque: #f39c12;
+    --preto-padrao: #2c3e50;
 }
 body{
     min-height: 100vh;
     overflow-x: hidden;
+    color: var(--preto-padrao);
+    font-family: var(--fonte-padrao);
 }

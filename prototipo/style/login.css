@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #95a5a6;
-    color: #2c3e50;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor02);
 }
 
 main {
@@ -27,7 +25,7 @@ main {
 h1 {
     text-align: center;
     margin: 20px 0px 5px;
-    font-family: Agbalumo, sans-serif;
+    font-family: var(--fonte-logo);
     font-size: 2.5em;
     /* color: #2ecc71; */
 }
@@ -45,7 +43,7 @@ h1 {
     width: 50%;
     height: 500px;
     display: block;
-    background: rgb(0, 26, 0) url('../img/pexels-kamshotthat-3457780.jpg') center center no-repeat;
+    background: rgb(0, 26, 0) url('../img/outro-carro.jpg') center center no-repeat;
     background-size: cover;
     border-radius: 25px 0px 0px 25px;
 }
@@ -66,7 +64,6 @@ h1 {
 
 .coolinput label.text {
     font-size: 1em;
-    color: #000000;
     font-weight: 700;
     position: relative;
     top: 0.5rem;
@@ -100,7 +97,6 @@ button {
     display: block;
     margin: 0px auto 10px;
     font-size: 18px;
-    color: #2c3e50;
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
@@ -132,7 +128,7 @@ button:after {
     position: absolute;
     width: 0%;
     height: 2px;
-    background-color: #f39c12;
+    background-color: var(--cor-destaque);
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
@@ -144,6 +140,6 @@ form p {
 }
 
 form strong {
-    color: #f39c12;
+    color: var(--cor-destaque);
     cursor: pointer;
 }
