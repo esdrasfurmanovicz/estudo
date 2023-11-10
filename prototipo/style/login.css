@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #95a5a6;
+    color: #2c3e50;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 50%;
+    border-radius: 25px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.423);
+    background-color: white;
+}
+
+/* Login */
+.login {
+    padding: 20px;
+    width: 50%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Agbalumo, sans-serif;
+    /* color: #2ecc71; */
+}
+
+/* Fundo / imagem */
+.fund {
+    width: 50%;
+    height: 500px;
+    display: block;
+    background: rgb(0, 26, 0) url('../img/pexels-kamshotthat-3457780.jpg') center center no-repeat;
+    background-size: cover;
+    border-radius: 25px 0px 0px 25px;
+}
+
+/* Formulario / input */
+
+.coolinput {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: static;
+    max-width: 240px;
+    margin: 10px auto;
+  }
+  
+  .coolinput label.text {
+    font-size: 1em;
+    color: #000000;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: auto;
+    padding: 0 3px;
+    background: #ffffff;
+    width: fit-content;
+  }
+  
+  .coolinput input[type=text].input {
+    margin: auto;
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    border: 2px #000000 solid;
+    border-radius: 5px;
+    background: #ffffff;
+  }
+  
+  .coolinput input[type=text].input:focus {
+    outline: none;
+  }   
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+/* Botões */
+button {
+    display: block;
+    margin: auto;
+    font-size: 18px;
+    color: #2c3e50;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+button:focus,
+button:hover {
+    color: #000000;
+}
+
+button:focus:after,
+button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #f39c12;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+form p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form strong {
+    color: #f39c12;
+    cursor: pointer;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Login</title>
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/login.css">
+</head>
+
+<body>
+    <main>
+        <div class="fund">
+
+        </div>
+        <div class="login">
+            <h1>Al'one</h1>
+            <div class="formulario">
+                <form method="POST" id="loginForm">
+                    <div class="coolinput">
+                        <label for="cpf" class="text">CPF:</label>
+                        <input type="text" id="cpf" placeholder="000.000.000-00" name="cpf" class="input">
+                    </div>
+                    <div class="coolinput">
+                        <label for="placa" class="text">Placa:</label>
+                        <input type="text" id="placa" placeholder="EXM0P0" name="placa" class="input">
+                    </div><br>
+                    <button type="submit">Entrar</button>
+                    <p>Não tem uma conta? <strong>Cadastre-se</strong></p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        const formulario = document.getElementById('loginForm')
+        formulario.addEventListener('submit', function (event) {
+            event.preventDefault()
+            let cpf = document.getElementById('cpf').value;
+            let placa = document.getElementById('placa').value;
+
+            if (cpf === '077.329.589-50' && placa === 'BRA2E19') {
+                window.location.replace('home.html');
+            } else {
+                alert('Usuário ou senha incorretos.');
+            }
+
+        })
+    </script>
+</body>
+
+</html>
