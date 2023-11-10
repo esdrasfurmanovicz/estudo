@@ -24,3 +24,43 @@ body{
     color: var(--preto-padrao);
     font-family: var(--fonte-padrao);
 }
+ul{
+    list-style: none;
+}
+nav a {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  nav a:focus,
+  nav a:hover {
+    color: black;
+  }
+  
+  nav a:focus:after,
+  nav a:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  nav a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -1px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor2);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }

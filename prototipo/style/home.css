@@ -1,1 +1,49 @@
 @charset "UTF-8";
+
+/* Header / Cabeçalho */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+    background-color: var(--cor02);
+    padding: 10px;
+}
+h1{
+    font-family: var(--fonte-logo);
+    color: black;
+    padding: 0px 20px;
+}
+ul{
+    display: flex;
+    gap: 10px;
+    color: black;
+    font-size: 1.2em;
+}
+
+/* Main / Principal */
+main{
+    min-height: 50vh;
+}
+.info{
+    width: 60%;
+    height: calc(100vh - 25vh);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.432);
+}
+.info img{
+    display: block;
+    margin: 0px auto 10px;
+    max-width: 100px;
+    border-bottom: 1px solid black;
+}
+h2{
+    text-align: center;
+}
+/* Footer / Rodapé */
+footer{
+    height: 10vh;
+    background-color: var(--cor01);
+}
