@@ -42,6 +42,22 @@ main{
 h2{
     text-align: center;
 }
+.autoInfo{
+    padding: 20px;
+
+}
+.autoInfo:nth-child(1){
+    border-right: 1px solid black;
+}
+
+.autoInfo p{
+    font-size: 1.2em;
+}
+#user{
+    margin-top: 10px;
+    text-align: center;
+}
+
 /* Footer / Rodapé */
 footer{
     height: 10vh;

@@ -1,18 +1,16 @@
-
-
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor02);
+    background-image: linear-gradient(to bottom, var(--cor02), #143852);
 }
 
 main {
     display: flex;
     width: 60%;
     height: 50%;
-    border-radius: 25px;
-    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.423);
+    border-radius: 25px 23px 23px 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.549);
     background-color: white;
 }
 
@@ -27,7 +25,6 @@ h1 {
     margin: 20px 0px 5px;
     font-family: var(--fonte-logo);
     font-size: 2.5em;
-    /* color: #2ecc71; */
 }
 
 .login p {
@@ -45,7 +42,7 @@ h1 {
     display: block;
     background: rgb(0, 26, 0) url('../img/outro-carro.jpg') center center no-repeat;
     background-size: cover;
-    border-radius: 25px 0px 0px 25px;
+    border-radius: 24px 0px 0px 24px;
 }
 
 /* Formulario / input */
@@ -55,10 +52,11 @@ h1 {
     flex-direction: column;
     width: fit-content;
     position: static;
-    max-width: 240px;
+    min-width: 70%;
     margin: 10px auto;
 }
-.coolinput:nth-child(2){
+
+.coolinput:nth-child(2) {
     margin-bottom: 20px;
 }
 
@@ -86,6 +84,106 @@ h1 {
     outline: none;
 }
 
+.group {
+    display: flex;
+    line-height: 30px;
+    align-items: center;
+    position: relative;
+    max-width: 70%;
+    margin: auto;
+}
+
+.input {
+    width: 100%;
+    height: 45px;
+    line-height: 30px;
+    padding: 0 5rem;
+    padding-left: 3rem;
+    border: 2px solid rgba(0, 0, 0, 0.374);
+    border-radius: 10px;
+    outline: none;
+    background-color: #f8fafc;
+    color: #0d0c22;
+    transition: .5s ease;
+}
+
+.input::placeholder {
+    color: #94a3b8;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: var(--cor02);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+}
+
+/*------ Settings ------*/
+.container {
+    --color: var(--preto-padrao);
+    --size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 1rem;
+    fill: none;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+}
+
+.container .lock-open {
+    position: absolute;
+    animation: keyframes-fill .5s;
+}
+
+.container .lock {
+    position: absolute;
+    display: none;
+    animation: keyframes-fill .5s;
+}
+
+/* ------ On check event ------ */
+.container input:checked~.lock-open {
+    display: none;
+}
+
+.container input:checked~.lock {
+    display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* position: absolute;
+  left: 1rem;
+  fill: none;
+  width: 1rem;
+  height: 1rem; */
+
 /* reset input */
 .form__field:required,
 .form__field:invalid {
@@ -93,7 +191,7 @@ h1 {
 }
 
 /* Botões */
-button {
+#entrar {
     display: block;
     margin: 0px auto 10px;
     font-size: 18px;
@@ -109,18 +207,18 @@ button {
     transition-property: color;
 }
 
-button:focus,
-button:hover {
+#entrar:focus,
+#entrar:hover {
     color: #000000;
 }
 
-button:focus:after,
-button:hover:after {
+#entrar:focus:after,
+#entrar:hover:after {
     width: 100%;
     left: 0%;
 }
 
-button:after {
+#entrar:after {
     content: "";
     pointer-events: none;
     bottom: -2px;
@@ -142,4 +240,167 @@ form p {
 form strong {
     color: var(--cor-destaque);
     cursor: pointer;
+}
+
+form small {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.504);
+}
+
+/* Card */
+
+.card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.178);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Conteudo do Card */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #00bfff;
+}
+
+.message,
+.signin {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a:hover {
+    text-decoration: underline royalblue;
+}
+
+.signin a {
+    color: #00bfff;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input+span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown+span {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+    color: #00bfff;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.input {
+    font-size: medium;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: #00bfff;
+}
+
+.submit:hover {
+    background-color: #00bfff96;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
 }
