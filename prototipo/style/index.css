@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Sarala:wght@400;700&family=Young+Serif&display=swap');
 
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
 }
 
@@ -28,7 +28,7 @@ body {
   font-family: var(--fonte-padrao);
 }
 /* Load */
-
+/*
 .loader {
   position: fixed;
   top: 0;
@@ -56,7 +56,7 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
+*/
 /*loader */
 .semicircle,
 .semicircle div {
@@ -143,7 +143,14 @@ main{
 }
 h1{
   text-align: center;
-  margin: 20px 0px;
+  margin: 20px 0px 50px;
+  font-family: var(--fonte-logo);
+}
+h2{
+  font-size: 1.4em;
+  text-align: center;
+  margin: 10px 0px;
+  font-family: var(--fonte-destaque);
 }
 /* Pesquisar placa */
 .pesqu{
@@ -151,52 +158,67 @@ h1{
   background-color: rgb(224, 224, 224);
   margin: auto;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 20px;
 }
-.input-container {
-  width: 220px;
-  margin: auto;
+
+
+.cont{
+  width: 400px;
+  height: 100px;
+  background-color: white;
+  border: 7px solid rgb(30, 30, 30);
+  border-radius: 20px;
   position: relative;
+  margin: auto;
 }
-
-.icon {
-  position: absolute;
-  right: 10px;
-  top: calc(50% + 5px);
-  transform: translateY(calc(-50% - 5px));
-}
-
-.input {
+.bt{
   width: 100%;
-  height: 40px;
-  padding: 10px;
-  transition: .2s linear;
-  border: 2.5px solid black;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  height: 35%;
+  background-color: rgb(0, 78, 195);
+  border-radius: 14px 14px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
 }
-
-.input:focus {
+.br{
+  height: 10%;
+  width: 100;
+}
+.bt p{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0px;
+}
+.bb p{
+  position: absolute;
+  bottom: -15px;
+  left: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: 1.3em;
+  font-weight: bold;
+}
+input{
+  display: block;
+  margin: auto;
+  width: 80%;
+  height: 55%;
+  border: none;
+  font-size: 3em;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+input:focus{
+  border: none;
   outline: none;
-  border: 0.5px solid black;
-  box-shadow: -5px -5px 0px black;
+}
+.bt img{
+  width: 35px;
 }
 
-.input-container:hover > .icon {
-  animation: anim 1s linear infinite;
-}
 
-@keyframes anim {
-  0%,
-  100% {
-    transform: translateY(calc(-50% - 5px)) scale(1);
-  }
-
-  50% {
-    transform: translateY(calc(-50% - 5px)) scale(1.1);
-  }
-}
 /* Outros */
 .outros{
   height: 100vh;
