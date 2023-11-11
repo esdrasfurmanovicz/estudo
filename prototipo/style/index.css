@@ -1,66 +1,204 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Sarala:wght@400;700&family=Young+Serif&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-:root{
-    --fonte-logo: Agbalumo, sans-serif;
-    --fonte-padrao: Sarala, sans-serif;
-    --fonte-destaque: Young Serif, serif;
 
-    --cor01: #0D2738;
-    --cor02: #3B5F78;
-    --cor03: #88A5B8;
-    --cor04: #8C7350;
-    --cor05: #38260D;
-    --cor-destaque: #f39c12;
-    --preto-padrao: #2c3e50;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    min-height: 100vh;
-    overflow-x: hidden;
-    color: var(--preto-padrao);
-    font-family: var(--fonte-padrao);
+
+:root {
+  --fonte-logo: Agbalumo, sans-serif;
+  --fonte-padrao: Sarala, sans-serif;
+  --fonte-destaque: Young Serif, serif;
+
+  --cor01: #0D2738;
+  --cor02: #3B5F78;
+  --cor03: #88A5B8;
+  --cor04: #8C7350;
+  --cor05: #38260D;
+  --cor-destaque: #f39c12;
+  --preto-padrao: #2c3e50;
 }
-ul{
-    list-style: none;
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--preto-padrao);
+  font-family: var(--fonte-padrao);
 }
-nav a {
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background: none;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
+/* Load */
+/*
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f275;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transform: translateY(20px);
+}
+
+.show-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+*/
+/*loader */
+.semicircle,
+.semicircle div {
+  /*  ajuste do tamanho */
+  width: 170px;
+  height: 170px;
+  /* Ajuste do tempo da animação */
+  animation: 6s rotate141 infinite linear;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.semicircle div {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+.semicircle:before,
+.semicircle div:before {
+  content: '';
+  width: 100%;
+  height: 50%;
+  display: block;
+  background: radial-gradient(transparent, transparent 65%, var(--cor01) 65%, #000);
+  background-size: 100% 200%;
+}
+
+@keyframes rotate141 {
+  to {
+    transform: rotate(360deg);
   }
-  
-  nav a:focus,
-  nav a:hover {
-    color: black;
+}
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+  background-color: var(--cor02);
+  padding: 10px;
+}
+header img{
+  width: 100px;
+  margin-left: 20px;
+}
+ul {
+  list-style: none;
+}
+
+header ul {
+  display: flex;
+  gap: 10px;
+  color: black;
+  font-size: 1.2em;
+}
+
+nav a {    /* Navegação */
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.627);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-decoration: none;
+  padding: 3px;
+}
+
+nav a:hover {
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+}
+/* Main */
+main{
+  padding: 20px;
+}
+/* Conteudo */
+.conteudo{
+  height: 100vh;
+}
+h1{
+  text-align: center;
+  margin: 20px 0px;
+}
+/* Pesquisar placa */
+.pesqu{
+  width: 70%;
+  background-color: rgb(224, 224, 224);
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+}
+.input-container {
+  width: 220px;
+  margin: auto;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  top: calc(50% + 5px);
+  transform: translateY(calc(-50% - 5px));
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  transition: .2s linear;
+  border: 2.5px solid black;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.input:focus {
+  outline: none;
+  border: 0.5px solid black;
+  box-shadow: -5px -5px 0px black;
+}
+
+.input-container:hover > .icon {
+  animation: anim 1s linear infinite;
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    transform: translateY(calc(-50% - 5px)) scale(1);
   }
-  
-  nav a:focus:after,
-  nav a:hover:after {
-    width: 100%;
-    left: 0%;
+
+  50% {
+    transform: translateY(calc(-50% - 5px)) scale(1.1);
   }
-  
-  nav a:after {
-    content: "";
-    pointer-events: none;
-    bottom: -1px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: var(--cor2);
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
-  }
+}
+/* Outros */
+.outros{
+  height: 100vh;
+}
+

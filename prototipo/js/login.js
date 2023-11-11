@@ -5,7 +5,7 @@ formulario.addEventListener('submit', function (event) {
     let senha = document.getElementById('password').value;
 
     if (email === 'sla@gmail.com' && senha === 'Baiano123') {
-        window.location.replace('home.html');
+        window.location.replace('../index.html');
     } else {
         alert('Usuário ou senha incorretos.');
     }
