@@ -1,0 +1,170 @@
+/* Load */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f275;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    transform: translateY(20px);
+}
+
+.show-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*loader */
+.semicircle,
+.semicircle div {
+    /*  ajuste do tamanho */
+    width: 170px;
+    height: 170px;
+    /* Ajuste do tempo da animação */
+    animation: 6s rotate141 infinite linear;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.semicircle div {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.semicircle:before,
+.semicircle div:before {
+    content: '';
+    width: 100%;
+    height: 50%;
+    display: block;
+    background: radial-gradient(transparent, transparent 65%, var(--cor01) 65%, #000);
+    background-size: 100% 200%;
+}
+
+@keyframes rotate141 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Main */
+main {
+    padding: 20px;
+}
+
+/* Conteudo */
+.conteudo {
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0px 50px;
+    font-family: var(--fonte-logo);
+}
+
+h2 {
+    font-size: 1.4em;
+    text-align: center;
+    margin: 10px 0px;
+    font-family: var(--fonte-destaque);
+}
+
+/* Pesquisar placa */
+.pesqu {
+    width: 70%;
+    background-color: rgb(224, 224, 224);
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.cont {
+    width: 400px;
+    height: 100px;
+    background-color: white;
+    border: 7px solid rgb(30, 30, 30);
+    border-radius: 20px;
+    position: relative;
+    margin: auto;
+}
+
+.bt {
+    width: 100%;
+    height: 35%;
+    background-color: rgb(0, 78, 195);
+    border-radius: 14px 14px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.br {
+    height: 10%;
+    width: 100;
+}
+
+.bt p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0px;
+}
+
+.bb p {
+    position: absolute;
+    bottom: -15px;
+    left: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 1.3em;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 55%;
+    border: none;
+    font-size: 3em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.bt img {
+    width: 35px;
+}
+
+
+/* Outros */
+.outros {
+    height: 100vh;
+}
