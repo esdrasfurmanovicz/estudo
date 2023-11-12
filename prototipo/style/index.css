@@ -27,6 +27,7 @@ body {
   color: var(--preto-padrao);
   font-family: var(--fonte-padrao);
 }
+
 /* Header */
 header {
   display: flex;
@@ -37,105 +38,173 @@ header {
   padding: 10px;
   box-shadow: 0px 5px 10px #3b5f787d;
 }
-header img{
+
+header img {
   width: 100px;
   margin-left: 20px;
 }
+header div:nth-child(1){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.noti {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  transition-duration: .3s;
+  border: none;
+}
+.noti div{
+  background-color: rgb(229, 137, 152);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  color: black;
+  font-weight: bolder;
+  padding: 2px;
+  font-size: 0.7em;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+.bell {
+  width: 18px;
+}
+
+.bell path {
+  fill: black;
+}
+
+.noti:hover .bell {
+  animation: bellRing 0.9s both;
+}
+
+/* bell ringing animation keyframes*/
+@keyframes bellRing {
+  0%,
+  100% {
+    transform-origin: top;
+  }
+
+  15% {
+    transform: rotateZ(10deg);
+  }
+
+  30% {
+    transform: rotateZ(-10deg);
+  }
+
+  45% {
+    transform: rotateZ(5deg);
+  }
+
+  60% {
+    transform: rotateZ(-5deg);
+  }
+
+  75% {
+    transform: rotateZ(2deg);
+  }
+}
+
+.noti:active {
+  transform: scale(0.8);
+}
+
 ul {
   list-style: none;
 }
 
-header ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: black;
-  font-size: 1.2em;
-  height: 100%;
-  width: 10%;
-}
 
-nav a {    /* Navegação */
-  font-size: 0.9em;
-  color: rgba(0, 0, 0, 0.627);
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  background: none;
-  text-decoration: none;
-  padding: 3px;
-}
-
-nav a:hover {
-  color: rgb(0, 0, 0);
-  transition: 0.3s;
-}
-
-.Btn {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
+button.learn-more {
   position: relative;
-  overflow: hidden;
-  transition-duration: .3s;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-  background-color: rgb(255, 65, 65);
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  width: 8rem;
+  height: 50%;
 }
 
-/* plus sign */
-.sign {
-  width: 100%;
-  transition-duration: .3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
 }
 
-.sign svg {
-  width: 17px;
-}
-
-.sign svg path {
-  fill: white;
-}
-/* text */
-.text {
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
-  right: 0%;
-  width: 0%;
-  opacity: 0;
-  color: white;
-  font-size: 1.2em;
-  font-weight: 600;
-  transition-duration: .3s;
-}
-/* hover effect on button width */
-.Btn:hover {
-  width: 125px;
-  border-radius: 40px;
-  transition-duration: .3s;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
 }
 
-.Btn:hover .sign {
-  width: 30%;
-  transition-duration: .3s;
-  padding-left: 20px;
-}
-/* hover effect button's text */
-.Btn:hover .text {
-  opacity: 1;
-  width: 70%;
-  transition-duration: .3s;
-  padding-right: 10px;
-}
-/* button click effect*/
-.Btn:active {
-  transform: translate(2px ,2px);
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
 }
 
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}
