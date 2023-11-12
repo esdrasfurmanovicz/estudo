@@ -37,21 +37,29 @@ header {
   background-color: var(--cor02);
   padding: 10px;
   box-shadow: 0px 5px 10px #3b5f787d;
+  position: relative;
 }
 
 header img {
   width: 100px;
   margin-left: 20px;
 }
-header div:nth-child(1){
+
+header div:nth-child(1) {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .noti {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: relative;
   display: flex;
   align-items: center;
@@ -60,9 +68,20 @@ header div:nth-child(1){
   cursor: pointer;
   transition-duration: .3s;
   border: none;
+  user-select: none;
 }
-.noti div{
+.noti input{
+  position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    transform: scale(280%);
+    z-index: 2;
+}
+.noti div {
   background-color: rgb(229, 137, 152);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -71,12 +90,13 @@ header div:nth-child(1){
   font-weight: bolder;
   padding: 2px;
   font-size: 0.7em;
-  top: 10px;
-  right: 10px;
+  top: -1px;
+  right: -1px;
   z-index: 1;
 }
+
 .bell {
-  width: 18px;
+  width: 100%;
 }
 
 .bell path {
@@ -89,6 +109,7 @@ header div:nth-child(1){
 
 /* bell ringing animation keyframes*/
 @keyframes bellRing {
+
   0%,
   100% {
     transform-origin: top;
@@ -207,4 +228,52 @@ button:hover .circle .icon.arrow {
 
 button:hover .button-text {
   color: #fff;
+}
+.avBlock{
+  display: none;
+}
+#pingo2 {
+  margin: 20px auto 0px;
+  width: 0px;
+  height: 0px;
+  border-left: 6px solid transparent;
+  /* Lado esquerdo transparente */
+  border-right: 6px solid transparent;
+  /* Lado direito transparente */
+  border-bottom: 15px solid black;
+  /* Lado inferior colorido */
+  position: absolute;
+  bottom: 30px;
+  left: 11.2%;
+}
+
+.avisos {
+  width: 400px;
+  height: 125px;
+  background-color: rgb(17, 17, 17);
+  border-radius: 5px;
+  border: 1px solid var(--cor-destaque);
+  position: absolute;
+  bottom: -95px;
+  left: 9%;
+  z-index: 1;
+}
+
+.avisos p {
+  font-size: 1.1em;
+  color: rgb(191, 191, 191);
+  height: 50%;
+  margin: 0px;
+  padding: 5px 5px 5px 10px;
+}
+
+#strong {
+  color: rgb(255, 255, 255);
+  font-size: 1.1em;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.avisos p:nth-child(1) {
+  border-bottom: 1px solid gray;
 }
