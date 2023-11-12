@@ -1,5 +1,5 @@
 /* Load */
-
+/*
 .loader {
     position: fixed;
     top: 0;
@@ -65,22 +65,35 @@
         transform: rotate(360deg);
     }
 }
-
-
-/* Main */
+body{
+    position: relative;
+}
+.goBack{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    position: fixed;
+    height: 70px;
+    width: 70px;
+    background-color: aqua;
+    border-radius: 50%;
+}
 main {
     padding: 20px;
 }
 
 /* Conteudo */
 .conteudo {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 h1 {
+    width: 40%;
     text-align: center;
-    margin: 20px 0px 50px;
+    padding-bottom: 20px;
+    margin: 20px auto 20px;
     font-family: var(--fonte-logo);
+    border-bottom: 0.7px solid black;
 }
 
 h2 {
@@ -88,15 +101,15 @@ h2 {
     text-align: center;
     margin: 10px 0px;
     font-family: var(--fonte-destaque);
+    padding: 10px;
+    color: black;
 }
 
 /* Pesquisar placa */
 .pesqu {
-    width: 70%;
-    background-color: rgb(224, 224, 224);
+    width: 60%;
     margin: auto;
-    padding: 20px;
-    border-radius: 20px;
+    border-radius: 50% 50% 10% 10%;
 }
 
 
@@ -107,7 +120,7 @@ h2 {
     border: 7px solid rgb(30, 30, 30);
     border-radius: 20px;
     position: relative;
-    margin: auto;
+    margin: 20px auto;
 }
 
 .bt {
@@ -163,9 +176,126 @@ input:focus {
 .bt img {
     width: 35px;
 }
+/* button submit */
 
+.btn {
+    display: block;
+    margin: auto;
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    color: var(--preto-padrao);
+    font-weight: bold;
+    font-size: 1.4em;
+    position: relative;
+    transition: .5s ease;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--cor05);
+    transition: .5s ease;
+  }
+  
+  .btn:hover {
+    color: var(--preto-padrao);
+    transition-delay: .5s;
+  }
+  
+  .btn:hover::before {
+    width: 100%;
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: var(--cor-destaque);
+    transition: .4s ease;
+    z-index: -1;
+  }
+  
+  .btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+/* Informações */
+#pingo{
+    display: none;
+    margin: 20px auto 0px;
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid transparent; /* Lado esquerdo transparente */
+    border-right: 50px solid transparent; /* Lado direito transparente */
+    border-bottom: 100px solid #ededed; /* Lado inferior colorido */
+}
+.info{
+    display: none;
+    width: 80%;
+    height: calc(100vh - 25vh);
+    padding: 20px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.432);
+}
+.info img{
+    display: block;
+    margin: 0px auto 10px;
+    max-width: 100px;
+    border-bottom: 1px solid black;
+}
+
+.autoInfo{
+    padding: 20px;
+
+}
+.autoInfo:nth-child(1){
+    border-right: 1px solid black;
+}
+
+.autoInfo p{
+    font-size: 1.2em;
+}
+#user{
+    margin-top: 10px;
+    text-align: center;
+}
 
 /* Outros */
 .outros {
     height: 100vh;
+    padding: 20px;  
+}
+.goTo{
+    cursor: pointer;
+}
+/* Footer  */
+footer{
+    background-color: var(--cor03);
+    height: 10vh;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.espaco{
+    height: 5000px;
+    width: 100%;
+    background-color: aquamarine;
+}
+.ancora{
+    height: 40vh;
+    width: 100%;
+    background-color: pink;
 }

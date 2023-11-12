@@ -1,3 +1,4 @@
+/*
 window.addEventListener('load', function() {
     // Simule um atraso de 2 segundos (2000 milissegundos) para a tela de carregamento.
     setTimeout(function() {
@@ -15,3 +16,25 @@ window.addEventListener('load', function() {
         }, 500); // Tempo igual à duração da transição (0.5s).
     }, 2000);
 }); 
+*/
+/* add carro */
+const pesqu = document.getElementById('form')
+pesqu.addEventListener("submit", function (event) {
+    event.preventDefault()
+    let placa = document.getElementById('placa').value
+    let user = document.querySelector('.info')
+    let pingo = document.querySelector('#pingo')
+    if (placa === 'BRA2E19' || placa === 'bra2e19') {
+        user.style.display = 'block'
+        pingo.style.display = 'block'
+    } else{
+        alert('Placa inválida!')
+    }
+})
+/* Navegar até tal parte da pagina */
+function navigateToDestination(destino) {
+    let i = document.querySelector(destino)
+    i.scrollIntoView({behavior: "smooth"});
+}
+
+

@@ -12,77 +12,27 @@
         }
         body{
             display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: rgb(210, 210, 210);
-        }
-        .cont{
-            width: 400px;
-            height: 100px;
-            background-color: white;
-            border: 7px solid rgb(30, 30, 30);
-            border-radius: 20px;
-            position: relative;
-        }
-        .bt{
-            width: 100%;
-            height: 35%;
-            background-color: rgb(0, 78, 195);
-            border-radius: 14px 14px 0px 0px;
-            display: flex;
+            flex-flow: column wrap;
             align-items: center;
             justify-content: space-between;
-            padding: 0px 10px;
+            height: 5000px;
         }
-        .br{
-            height: 10%;
-            width: 100;
+        .ancora{
+            
+            height: 100px;
+            width: 100%;
+            background-color: pink;
         }
-        .bt p{
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-        }
-        .bb p{
-            position: absolute;
-            bottom: 0px;
-            left: 2px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-family: 1.3em;
-        }
-        input{
-            display: block;
-            margin: auto;
-            width: 80%;
-            height: 55%;
-            border: none;
-            font-size: 3em;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-        }
-        input:focus{
-            border: none;
-            outline: none;
-        }
-        .bt img{
-            width: 35px;
-        }
-
     </style>
 </head>
 <body>
-    <div class="cont">
-        <div class="bt">
-            <img src="img/mercosul-logo-0.png" alt="">
-            <h1>BRASIL</h1>
-            <img src="img/brasil.png" alt="">
-        </div>
-        <input type="text" name="" id="">
-        <div class="bb">
-            <h2>BR</h2>
-        </div>
-    </div>
+    <button onclick="navigateToDestination('.ancora')">Acesse</button>
+    <div class="ancora"></div>
+    <script>
+        function navigateToDestination(destino) {
+            let i = document.querySelector(destino)
+            i.scrollIntoView({behavior: "smooth"});
+    }
+    </script>
 </body>
 </html>
