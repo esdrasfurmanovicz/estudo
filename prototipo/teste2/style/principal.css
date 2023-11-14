@@ -251,7 +251,7 @@ input:focus {
 }
 
 .flecha{
-    display: block;
+    display: none;
     margin: 40px auto 0px;
     transform: scale(2) rotate(90deg);
 }

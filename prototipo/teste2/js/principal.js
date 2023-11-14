@@ -48,8 +48,10 @@ pesqu.addEventListener("submit", function (event) {
     event.preventDefault()
     let placa = document.getElementById('placa').value
     let user = document.querySelector('.bra2e19')
+    let flecha = document.querySelector('.flecha')
     if (placa === 'BRA2E19' || placa === 'bra2e19') {
         user.style.display = 'block'
+        flecha.style.display = 'block'
     } else {
         alert('Placa inválida!')
     }
