@@ -1,26 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tooltip Example</title>
     <style>
-        *{
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
         }
         body{
             display: flex;
-            flex-flow: column wrap;
             align-items: center;
-            justify-content: space-between;
-            height: 5000px;
+            justify-content: center;
+            height: 100vh;
         }
-        
+
+        .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: grey;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        .tooltip-btn:hover+.tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
+
 <body>
-    
+    <div class="tooltip-container">
+        <button class="tooltip-btn">Hover over me</button>
+        <div class="tooltip">More information about the button</div>
+    </div>
+    <script>
+        document.querySelectorAll('.tooltip-btn').forEach(function (btn) {
+            btn.addEventListener('mouseover', function () {
+                var tooltip = this.nextElementSibling;
+                tooltip.style.visibility = 'visible';
+                tooltip.style.opacity = '1';
+            });
+
+            btn.addEventListener('mouseout', function () {
+                var tooltip = this.nextElementSibling;
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.opacity = '0';
+            });
+        });
+    </script>
 </body>
+
 </html>

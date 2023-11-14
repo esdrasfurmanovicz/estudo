@@ -1,5 +1,5 @@
 /* Load */
-/*
+/* row
 .loader {
     position: fixed;
     top: 0;
@@ -142,20 +142,28 @@ body {
 }
 
 
-main {
-    padding: 20px;
-}
 
+/* .transition{
+    height: 5vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, var(--cor02), var(--cor03) 90%);
+} */
 /* Conteudo */
 .conteudo {
-    min-height: 75vh;
+    min-height: 80vh;
+    background: white url('../img/Design\ sem.jpg') no-repeat center bottom;
+    background-size: cover;
+    color: white;
+    padding-top: 30px;
 }
-
+.relat{
+    position: relative;
+}
 h1 {
     width: 40%;
     text-align: center;
     padding-bottom: 20px;
-    margin: 20px auto 20px;
+    margin: 0px auto 20px;
     font-family: var(--fonte-logo);
     border-bottom: 0.7px solid black;
 }
@@ -216,7 +224,8 @@ h2 {
     left: 2px;
     font-family: Arial, Helvetica, sans-serif;
     font-family: 1.3em;
-    font-weight: bold;
+    font-weight: bold; 
+    color: #000;
 }
 
 input {
@@ -241,6 +250,11 @@ input:focus {
     width: 35px;
 }
 
+.flecha{
+    display: none;
+    margin: 40px auto 0px;
+    transform: scale(2) rotate(90deg);
+}
 /* button submit */
 
 .btn {
@@ -255,6 +269,7 @@ input:focus {
     font-size: 1.4em;
     position: relative;
     transition: .5s ease;
+    z-index: 1;
 }
 
 .btn::before {
@@ -295,25 +310,27 @@ input:focus {
     color: aliceblue;
     border-radius: 5px 5px 0px 0px;
 }
-
+.bra2e19{
+    display: none;
+}
 /* Informações */
 #pingo {
-    display: none;
     margin: 20px auto 0px;
     width: 0px;
     height: 0px;
-    border-left: 50px solid transparent;
+    border-left: 70px solid transparent;
     /* Lado esquerdo transparente */
-    border-right: 50px solid transparent;
+    border-right: 70px solid transparent;
     /* Lado direito transparente */
-    border-bottom: 100px solid #ededed;
+    border-bottom: 140px solid #ededed;
     /* Lado inferior colorido */
 }
 
 .info {
-    display: none;
-    width: 80%;
+    width: 70%;
     min-height: calc(100vh - 25vh);
+    background-color: white;
+    color: #000;
     padding: 20px;
     margin: auto;
     border-radius: 20px;
@@ -391,6 +408,61 @@ input:focus {
     margin-top: 10px;
     text-align: center;
 }
+/* multas */
+.hinf{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+    position: relative;
+}
+#pulse{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(231, 231, 28);
+    animation: pulsa 1.5s infinite ease;
+}
+.pulseInfo{
+    visibility: hidden;
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: -180px;
+    left: 4%;
+    z-index: 1;
+    
+}
+.pif{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+.pif p{
+    font-size: 0.8em;
+}
+.pul{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+#pG{
+    background-color: rgb(11, 167, 11);
+}
+#pY{
+    background-color: rgb(231, 231, 28);
+}
+#pR{
+    background-color: red;
+}
+@keyframes pulsa{
+    0%{ box-shadow: 0px 0px 0px 2px rgb(248, 248, 121);}
+    50%{ box-shadow: 0px 0px 0px 6px rgb(248, 248, 121);}
+    100%{ box-shadow: 0px 0px 0px 2px rgb(248, 248, 121);}
+}
+
 
 /* veiculos adicionados */
 
@@ -608,25 +680,6 @@ input:focus {
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.434);
 }
-
-/* Outros */
-.outros {
-    min-height: 75vh;
-    padding: 20px;
-    padding-top: 75px;
-}
-
-.goTo {
-    cursor: pointer;
-}
-.liGo{
-    display: flex;
-    gap: 10px;
-}
-.liGo svg{
-    margin-top: 8px;
-}
-
 /* Footer  */
 footer {
     background-color: var(--cor03);
@@ -636,3 +689,14 @@ footer {
     margin-top: 20px;
 }
 
+.espaco {
+    height: 5000px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.ancora {
+    height: 40vh;
+    width: 100%;
+    background-color: pink;
+}

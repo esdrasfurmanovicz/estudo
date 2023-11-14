@@ -47,21 +47,29 @@ const pesqu = document.getElementById('form')
 pesqu.addEventListener("submit", function (event) {
     event.preventDefault()
     let placa = document.getElementById('placa').value
-    let user = document.querySelector('.info')
-    let pingo = document.querySelector('#pingo')
+    let user = document.querySelector('.bra2e19')
+    let flecha = document.querySelector('.flecha')
     if (placa === 'BRA2E19' || placa === 'bra2e19') {
         user.style.display = 'block'
-        pingo.style.display = 'block'
-        fundo.style.display = 'none'
+        flecha.style.display = 'block'
     } else {
         alert('Placa inválida!')
     }
 })
-/* Navegar até tal parte da pagina */
-function navigateToDestination(destino) {
-    let i = document.querySelector(destino)
-    i.scrollIntoView({ behavior: "smooth" });
-}
+/* hover pulse */
+document.querySelectorAll('#pulse').forEach(function (btn) {
+    btn.addEventListener('mouseover', function () {
+        var tooltip = document.querySelector('.pulseInfo');
+        tooltip.style.visibility = 'visible';
+        tooltip.style.opacity = '1';
+    });
+
+    btn.addEventListener('mouseout', function () {
+        var tooltip = document.querySelector('.pulseInfo');
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.opacity = '0';
+    });
+});
 
 /*  Mais informações - veiculos adicionados  */
 let more1 = document.querySelector('#more1')
