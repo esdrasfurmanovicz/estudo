@@ -1,5 +1,5 @@
 /* Load */
-/*
+/* row
 .loader {
     position: fixed;
     top: 0;
@@ -151,7 +151,7 @@ body {
 /* Conteudo */
 .conteudo {
     min-height: 80vh;
-    background: black url('../img/Design\ sem.jpg') no-repeat center bottom;
+    background: white url('../img/Design\ sem.jpg') no-repeat center bottom;
     background-size: cover;
     color: white;
     padding-top: 30px;
@@ -224,7 +224,8 @@ h2 {
     left: 2px;
     font-family: Arial, Helvetica, sans-serif;
     font-family: 1.3em;
-    font-weight: bold;
+    font-weight: bold; 
+    color: #000;
 }
 
 input {
@@ -248,7 +249,8 @@ input:focus {
 .bt img {
     width: 35px;
 }
-.row{
+
+.flecha{
     display: block;
     margin: 40px auto 0px;
     transform: scale(2) rotate(90deg);
