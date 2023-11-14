@@ -408,6 +408,26 @@ input:focus {
     margin-top: 10px;
     text-align: center;
 }
+/* multas */
+.hinf{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+}
+#pulse{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(231, 231, 28);
+    animation: pulsa 1.5s infinite ease;
+}
+@keyframes pulsa{
+    0%{ box-shadow: 0px 0px 0px 2px rgb(248, 248, 121);}
+    50%{ box-shadow: 0px 0px 0px 6px rgb(248, 248, 121);}
+    100%{ box-shadow: 0px 0px 0px 2px rgb(248, 248, 121);}
+}
+
 
 /* veiculos adicionados */
 
