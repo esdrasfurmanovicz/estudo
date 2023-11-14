@@ -47,12 +47,9 @@ const pesqu = document.getElementById('form')
 pesqu.addEventListener("submit", function (event) {
     event.preventDefault()
     let placa = document.getElementById('placa').value
-    let user = document.querySelector('.info')
-    let pingo = document.querySelector('#pingo')
+    let user = document.querySelector('.bra2e19')
     if (placa === 'BRA2E19' || placa === 'bra2e19') {
         user.style.display = 'block'
-        pingo.style.display = 'block'
-        fundo.style.display = 'none'
     } else {
         alert('Placa inválida!')
     }
