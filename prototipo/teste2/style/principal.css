@@ -151,8 +151,9 @@ body {
 /* Conteudo */
 .conteudo {
     min-height: 80vh;
-    background: black url('../img/Design\ sem\ nome.jpg') no-repeat center bottom;
+    background: black url('../img/Design\ sem.jpg') no-repeat center bottom;
     background-size: cover;
+    color: white;
 }
 
 h1 {
@@ -161,7 +162,6 @@ h1 {
     padding-bottom: 20px;
     margin: 0px auto 20px;
     font-family: var(--fonte-logo);
-    color: #000;
     border-bottom: 0.7px solid black;
 }
 
