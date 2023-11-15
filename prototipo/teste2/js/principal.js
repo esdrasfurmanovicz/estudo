@@ -56,20 +56,11 @@ pesqu.addEventListener("submit", function (event) {
         alert('Placa inválida!')
     }
 })
-/* hover pulse */
-document.querySelectorAll('#pulse').forEach(function (btn) {
-    btn.addEventListener('mouseover', function () {
-        var tooltip = document.querySelector('.pulseInfo');
-        tooltip.style.visibility = 'visible';
-        tooltip.style.opacity = '1';
-    });
-
-    btn.addEventListener('mouseout', function () {
-        var tooltip = document.querySelector('.pulseInfo');
-        tooltip.style.visibility = 'hidden';
-        tooltip.style.opacity = '0';
-    });
-});
+/* Navegar até tal parte da pagina */
+function navigateToDestination(destino) {
+    let i = document.querySelector(destino)
+    i.scrollIntoView({ behavior: "smooth" });
+}
 
 /*  Mais informações - veiculos adicionados  */
 let more1 = document.querySelector('#more1')
@@ -96,29 +87,3 @@ more2.addEventListener('click', function () {
         veiLac2.style.boxShadow = 'none'
     }
 })
-
-/* apagar veiculo add */
-function apagar(veic){
-    let v = document.querySelector(veic)
-    let confbox = document.querySelector('#confbox')
-    confbox.style.display = 'flex'
-    let confirmar = document.querySelector('#confirmar')
-    let cancelar = document.querySelector('#cancel')
-    confirmar.addEventListener('click', function(){
-        confbox.style.display = 'none'
-        v.style.display = 'none'
-        if (veiLac1.style.display == 'none' && veiLac2.style.display == 'none'){
-            let dilma = document.querySelector('#dilma')
-            dilma.style.display = 'flex'
-            dilma.innerHTML += 'Você não possui veiculos adicionados'
-        }
-        else{
-            console.log('Nós vamos estocar vento')
-        }
-    })
-    cancelar.addEventListener('click', function(){
-        confbox.style.display = 'none'
-
-    })
-}
-
