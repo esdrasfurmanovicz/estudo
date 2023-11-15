@@ -54,7 +54,6 @@ header div:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 }
 
 header a {
@@ -250,7 +249,7 @@ button:hover .button-text {
   /* Lado inferior colorido */
   position: absolute;
   bottom: 30px;
-  left: 10.5%;
+  left: 10.2%;
 }
 
 .avisos {
@@ -265,7 +264,7 @@ button:hover .button-text {
   border: 1px solid var(--cor-destaque);
   position: absolute;
   bottom: -95px;
-  left: 8%;
+  left: 7%;
   z-index: 1;
 }
 
@@ -297,7 +296,8 @@ button:hover .button-text {
   background: transparent;
   cursor: pointer;
   display: block;
-  transform: scale(0.5);
+  transform: scale(0.7);
+  margin-right: 10px;
 }
 
 .burger input {

@@ -17,7 +17,11 @@ window.addEventListener('load', function() {
     }, 2000);
 }); 
 */
-
+/* Navegar até tal parte da pagina */
+function navigateToDestination(destino) {
+    let i = document.querySelector(destino)
+    i.scrollIntoView({ behavior: "smooth" });
+}
 /* Notificações */
 let checkNoti = document.querySelector('#checknoti')
 checkNoti.addEventListener('click', function () {
@@ -110,7 +114,7 @@ function apagar(veic){
         if (veiLac1.style.display == 'none' && veiLac2.style.display == 'none'){
             let dilma = document.querySelector('#dilma')
             dilma.style.display = 'flex'
-            dilma.innerHTML += 'Você não possui veiculos adicionados'
+            dilma.innerHTML = 'Você não possui veiculos adicionados'
         }
         else{
             console.log('Nós vamos estocar vento')

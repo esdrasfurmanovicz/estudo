@@ -726,18 +726,10 @@ footer {
     background-color: var(--cor03);
     height: 10vh;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
     margin-top: 20px;
 }
 
-.espaco {
-    height: 5000px;
-    width: 100%;
-    background-color: aquamarine;
-}
-
-.ancora {
-    height: 40vh;
-    width: 100%;
-    background-color: pink;
-}
