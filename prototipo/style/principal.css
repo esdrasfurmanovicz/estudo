@@ -440,7 +440,6 @@ input:focus {
 }
 
 #user {
-    margin-top: 10px;
     text-align: center;
 }
 /* multas */
@@ -696,15 +695,40 @@ input:focus {
 .mais2 {
     display: none;
     width: 70%;
-    height: 250px;
+    padding: 30px;
     margin: 0px auto;
     border-radius: 0px 0px 20px 20px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.67);
     border-left: 3px solid rgba(0, 0, 0, 0.67);
     border-right: 3px solid rgba(0, 0, 0, 0.67);
 }
-
-
+.veiLacInfo{
+    padding: 20px;
+}
+.veiLacMult{
+    border-left: 2px solid rgb(39, 39, 39);
+    padding: 20px;
+}
+#rp{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+#rp button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+#rp button:nth-child(1){
+    background-color: rgb(73, 0, 128);
+    color: white;
+}
+#rp button:nth-child(2){
+    background-color: rgb(255, 183, 0);
+}
 /* Condutor */
 
 .condutor{
@@ -712,7 +736,7 @@ input:focus {
     height: 50vh;
     margin: 50px auto;
     padding: 30px 20px 20px 20px;
-    background-color: antiquewhite;
+    background-color: white;
 }
 .condutor h2{
     display: block;
