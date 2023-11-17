@@ -99,6 +99,7 @@ more2.addEventListener('click', function () {
         mais2.style.display = 'none'
         veiLac2.style.boxShadow = 'none'
     }
+    
 })
 
 /* apagar veiculo add */
