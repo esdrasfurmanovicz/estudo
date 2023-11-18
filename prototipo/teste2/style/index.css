@@ -249,8 +249,8 @@ button:hover .button-text {
   border-bottom: 15px solid black;
   /* Lado inferior colorido */
   position: absolute;
-  bottom: 30px;
-  left: 10.5%;
+  bottom: 4vh;
+  left: 10.5vw;
 }
 
 .avisos {
@@ -361,8 +361,8 @@ button:hover .button-text {
   justify-content: center;
   border-radius: 5px;
   position: absolute;
-  right: 10.6%;
-  bottom: -93px;
+  right: 10.6vw;
+  bottom: -14vh;
   z-index: 2;
 }
 
