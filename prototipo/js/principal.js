@@ -37,11 +37,11 @@ checkNoti.addEventListener('click', function () {
 /* Burger menu */
 
 let burger = document.querySelector('#burger')
-burger.addEventListener('click', function(){
+burger.addEventListener('click', function () {
     let opc = document.querySelector('.opc')
-    if (burger.checked){
+    if (burger.checked) {
         opc.style.display = 'flex'
-    } else{
+    } else {
         opc.style.display = 'none'
     }
 })
@@ -99,30 +99,66 @@ more2.addEventListener('click', function () {
         mais2.style.display = 'none'
         veiLac2.style.boxShadow = 'none'
     }
-    
+
 })
 
 /* apagar veiculo add */
-function apagar(veic){
+function apagar(veic) {
     let v = document.querySelector(veic)
     let confbox = document.querySelector('#confbox')
     confbox.style.display = 'flex'
     let confirmar = document.querySelector('#confirmar')
     let cancelar = document.querySelector('#cancel')
-    confirmar.addEventListener('click', function(){
+    confirmar.addEventListener('click', function () {
         confbox.style.display = 'none'
         v.style.display = 'none'
-        if (veiLac1.style.display == 'none' && veiLac2.style.display == 'none'){
+        if (veiLac1.style.display == 'none' && veiLac2.style.display == 'none') {
             let dilma = document.querySelector('#dilma')
             dilma.style.display = 'flex'
             dilma.innerHTML = 'Você não possui veiculos adicionados'
         }
-        else{
+        else {
             console.log('Nós vamos estocar vento')
         }
     })
-    cancelar.addEventListener('click', function(){
+    cancelar.addEventListener('click', function () {
         confbox.style.display = 'none'
 
     })
 }
+
+/* Carrossel */
+const controls = document.querySelectorAll(".control");
+let currentItem = 0;
+const items = document.querySelectorAll(".item");
+const maxItems = items.length;
+
+controls.forEach((control) => {
+    control.addEventListener("click", (e) => {
+        isLeft = e.target.classList.contains("arrow-left");
+
+        if (isLeft) {
+            currentItem -= 1;
+        } else {
+            currentItem += 1;
+        }
+
+        if (currentItem >= maxItems) {
+            currentItem = 0;
+        }
+
+        if (currentItem < 0) {
+            currentItem = maxItems - 1;
+        }
+
+        items.forEach((item) => item.classList.remove("current-item"));
+
+        items[currentItem].scrollIntoView({
+            behavior: "smooth",
+            inline: "center"
+        });
+
+        items[currentItem].classList.add("current-item");
+    });
+});
+

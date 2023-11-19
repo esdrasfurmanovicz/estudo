@@ -20,7 +20,7 @@ main {
     padding: 20px;
 }
 
-.login img:nth-child(1){
+.login img:nth-child(1) {
     display: block;
     margin: 0px auto 20px;
     width: 40%;
