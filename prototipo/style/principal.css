@@ -794,6 +794,7 @@ input:focus {
     border: 1px solid gray;
     border-radius: 20px;
     background-color: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 #cnh p {
@@ -1081,7 +1082,8 @@ input:focus {
     background: blue url('../img/novidadeWallCard.jpg') no-repeat;
     background-size: cover;
 }
-#publiBtn{
+
+#publiBtn {
     display: flex;
     align-items: end;
     justify-content: space-evenly;
@@ -1120,9 +1122,9 @@ input:focus {
     transition: 0.3s;
     color: var(--color);
     background: var(--bg, var(--background));
-  }
-  
-  .continue-application > div {
+}
+
+.continue-application>div {
     top: 0;
     left: 0;
     bottom: 0;
@@ -1131,26 +1133,26 @@ input:focus {
     overflow: hidden;
     border-radius: 5px 0 0 5px;
     background: var(--background-left);
-  }
-  
-  .continue-application > div .folder {
+}
+
+.continue-application>div .folder {
     width: 23px;
     height: 27px;
     position: absolute;
     left: 15px;
     top: 13px;
-  }
-  
-  .continue-application > div .folder .top {
+}
+
+.continue-application>div .folder .top {
     left: 0;
     top: 0;
     z-index: 2;
     position: absolute;
     transform: translateX(var(--fx, 0));
     transition: transform 0.4s ease var(--fd, 0.3s);
-  }
-  
-  .continue-application > div .folder .top svg {
+}
+
+.continue-application>div .folder .top svg {
     width: 24px;
     height: 27px;
     display: block;
@@ -1158,10 +1160,11 @@ input:focus {
     transform-origin: 0 50%;
     transition: transform 0.3s ease var(--fds, 0.45s);
     transform: perspective(120px) rotateY(var(--fr, 0deg));
-  }
-  
-  .continue-application > div .folder:before, .continue-application > div .folder:after,
-  .continue-application > div .folder .paper {
+}
+
+.continue-application>div .folder:before,
+.continue-application>div .folder:after,
+.continue-application>div .folder .paper {
     content: "";
     position: absolute;
     left: var(--l, 0);
@@ -1170,34 +1173,35 @@ input:focus {
     height: var(--h, 100%);
     border-radius: 1px;
     background: var(--b, var(--folder-inner));
-  }
-  
-  .continue-application > div .folder:before {
+}
+
+.continue-application>div .folder:before {
     box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow), 0 3.5px 7px var(--shadow);
     transform: translateX(var(--fx, 0));
     transition: transform 0.4s ease var(--fd, 0.3s);
-  }
-  
-  .continue-application > div .folder:after,
-  .continue-application > div .folder .paper {
+}
+
+.continue-application>div .folder:after,
+.continue-application>div .folder .paper {
     --l: 1px;
     --t: 1px;
     --w: 21px;
     --h: 25px;
     --b: var(--paper-behind);
-  }
-  
-  .continue-application > div .folder:after {
+}
+
+.continue-application>div .folder:after {
     transform: translate(var(--pbx, 0), var(--pby, 0));
     transition: transform 0.4s ease var(--pbd, 0s);
-  }
-  
-  .continue-application > div .folder .paper {
+}
+
+.continue-application>div .folder .paper {
     z-index: 1;
     --b: var(--paper);
-  }
-  
-  .continue-application > div .folder .paper:before, .continue-application > div .folder .paper:after {
+}
+
+.continue-application>div .folder .paper:before,
+.continue-application>div .folder .paper:after {
     content: "";
     width: var(--wp, 14px);
     height: 2px;
@@ -1208,14 +1212,14 @@ input:focus {
     position: absolute;
     background: var(--paper-lines);
     box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
-  }
-  
-  .continue-application > div .folder .paper:after {
+}
+
+.continue-application>div .folder .paper:after {
     --tp: 6px;
     --wp: 10px;
-  }
-  
-  .continue-application > div .pencil {
+}
+
+.continue-application>div .pencil {
     height: 2px;
     width: 3px;
     border-radius: 1px 1px 0 0;
@@ -1227,9 +1231,10 @@ input:focus {
     background: var(--pencil-cap);
     transform: translateX(var(--pex, 0)) rotate(35deg);
     transition: transform 0.4s ease var(--pbd, 0s);
-  }
-  
-  .continue-application > div .pencil:before, .continue-application > div .pencil:after {
+}
+
+.continue-application>div .pencil:before,
+.continue-application>div .pencil:after {
     content: "";
     position: absolute;
     display: block;
@@ -1239,14 +1244,14 @@ input:focus {
     border-radius: var(--br, 2px 2px 0 0);
     top: var(--t, 2px);
     left: var(--l, -1px);
-  }
-  
-  .continue-application > div .pencil:before {
+}
+
+.continue-application>div .pencil:before {
     -webkit-clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
     clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
-  }
-  
-  .continue-application > div .pencil:after {
+}
+
+.continue-application>div .pencil:after {
     --b: none;
     --w: 3px;
     --h: 6px;
@@ -1255,9 +1260,10 @@ input:focus {
     --l: 3px;
     border-top: 1px solid var(--pencil-top);
     border-right: 1px solid var(--pencil-top);
-  }
-  
-  .continue-application:before, .continue-application:after {
+}
+
+.continue-application:before,
+.continue-application:after {
     content: "";
     position: absolute;
     width: 10px;
@@ -1269,13 +1275,13 @@ input:focus {
     top: 26px;
     right: 16px;
     transition: transform 0.3s;
-  }
-  
-  .continue-application:after {
+}
+
+.continue-application:after {
     --r: 45deg;
-  }
-  
-  .continue-application:hover {
+}
+
+.continue-application:hover {
     --cx: 2px;
     --bg: var(--background-hover);
     --fx: -40px;
@@ -1286,10 +1292,11 @@ input:focus {
     --pby: -3px;
     --pbd: .15s;
     --pex: -24px;
-  }
-  /* botão pagar */
+}
 
-  .Btn {
+/* botão pagar */
+
+.Btn {
     width: 110px;
     height: 53px;
     display: flex;
@@ -1306,17 +1313,17 @@ input:focus {
     position: relative;
     overflow: hidden;
     transition-duration: .3s;
-  }
-  
-  .svgIcon {
+}
+
+.svgIcon {
     width: 16px;
-  }
-  
-  .svgIcon path {
+}
+
+.svgIcon path {
     fill: white;
-  }
-  
-  .Btn::before {
+}
+
+.Btn::before {
     width: 110px;
     height: 110px;
     position: absolute;
@@ -1327,35 +1334,36 @@ input:focus {
     top: 0;
     transition-duration: .3s;
     mix-blend-mode: difference;
-  }
-  
-  .Btn:hover::before {
+}
+
+.Btn:hover::before {
     transition-duration: .3s;
-    transform: translate(100%,-50%);
+    transform: translate(100%, -50%);
     border-radius: 0;
-  }
-  
+}
+
 /* Carrossel Seguros*/
 
-.carrosselSeguros{
+.carrosselSeguros {
+    display: none;
     min-height: 70vh;
     margin: 50px auto;
     color: white;
 }
 
-  .carousel {
+.carousel {
     position: relative;
     padding: 15px;
     max-width: 95%;
     margin: 0 auto;
-  }
-  
-  .gallery-wrapper {
+}
+
+.gallery-wrapper {
     overflow-x: auto;
-  }
-  
-  .arrow-left,
-  .arrow-right {
+}
+
+.arrow-left,
+.arrow-right {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1374,89 +1382,188 @@ input:focus {
     cursor: pointer;
     border: none;
     z-index: 1;
-  }
-  
-  .arrow-left:hover,
-  .arrow-right:hover {
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
     opacity: 1;
-  }
-  .arrow-left:active,
-  .arrow-right:active {
+}
+
+.arrow-left:active,
+.arrow-right:active {
     border: none;
     outline: none;
-  }
-  
-  .arrow-right {
+}
+
+.arrow-right {
     right: 0;
     left: auto;
     text-align: right;
-  }
-  .arrow-left {
+}
+
+.arrow-left {
     left: 0;
     right: auto;
     text-align: left;
-  }
-  
-  .gallery {
+}
+
+.gallery {
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
-  }
-  
-  .item {
+}
+
+.item {
     width: 50%;
     height: 60vh;
     padding: 25px;
     flex-shrink: 0;
     transition: all 600ms ease-in-out;
     opacity: 0.5;
-  }
-  .item div{
+}
+
+.item div {
     background-color: rgb(49, 49, 49);
     width: 100%;
     height: 100%;
     padding: 10px;
     border-radius: 20px;
 
-  }
-  
-  .current-item {
+}
+
+.current-item {
     opacity: 1;
-  }
-  
-  /* This is from w3schools */
-  /* 
+}
+
+/* This is from w3schools */
+/* 
   https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .gallery-wrapper::-webkit-scrollbar {
+/* Hide scrollbar for Chrome, Safari and Opera */
+.gallery-wrapper::-webkit-scrollbar {
     display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .gallery-wrapper {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  .cyan {
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.gallery-wrapper {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.cyan {
     background: cyan;
-  }
-  
-  .deeppink {
+}
+
+.deeppink {
     background: deeppink;
-  }
-  
-  .turquoise {
+}
+
+.turquoise {
     background: turquoise;
-  }
-  
-  .darkblue {
+}
+
+.darkblue {
     background: darkblue;
+}
+
+.purple {
+    background: purple;
+}
+
+/* Planos */
+
+.planosBox {
+    width: 100%;
+    padding: 20px;
+    min-height: 70vh;
+    margin-top: 50px;
+}
+
+.planos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 70vh;
+    margin: 50px auto 0px;
+}
+
+
+
+
+#assina strong{
+    margin-left: 15px;
+    font-size: 1.5em;
+}
+/* assinaturas */
+
+#assina {
+    width: 30%;
+    height: 100%;
+    --main-color: #323232;
+    --sub-color: #5b5b5b;
+    --accent-color: #242C88;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 25px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--cor04);
+    transition: all 0.2s;
+    box-shadow: 0px 0px 5px -1.5px #000;
+}
+
+#assina::before {
+    content: '';
+    width: 99%;
+    height: 99%;
+    background: var(--sub-color);
+    position: absolute;
+    z-index: -1;
+    top: 1px;
+    left: 1px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+#assina:hover {
+    box-shadow: 0px 0px 20px -5px #000;
+}
+
+#assina:hover::before {
+    transform: rotate(10deg);
+    box-shadow: 0px 0px 20px -5px #000;
+}
+
+
+#assPlano {
+    padding: 1.3em 3em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    width: 60%;
+    margin: auto;
   }
   
-  .purple {
-    background: purple;
+  #assPlano:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
   }
+  
+  #assPlano:active {
+    transform: translateY(-2px);
+  }
+
 /* Footer  */
 footer {
     background-color: var(--cor03);
