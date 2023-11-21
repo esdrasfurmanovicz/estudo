@@ -1492,13 +1492,14 @@ input:focus {
 
 
 
-#assina strong{
+#assina strong {
     margin-left: 15px;
     font-size: 1.5em;
 }
+
 /* assinaturas */
 
-#assina {
+.assina {
     width: 30%;
     height: 100%;
     --main-color: #323232;
@@ -1516,7 +1517,7 @@ input:focus {
     box-shadow: 0px 0px 5px -1.5px #000;
 }
 
-#assina::before {
+.assina::before {
     content: '';
     width: 99%;
     height: 99%;
@@ -1528,11 +1529,12 @@ input:focus {
     border-radius: 25px;
     transition: all 0.3s;
 }
-#assina:hover {
+
+.assina:hover {
     box-shadow: 0px 0px 20px -5px #000;
 }
 
-#assina:hover::before {
+.assina:hover::before {
     transform: rotate(10deg);
     box-shadow: 0px 0px 20px -5px #000;
 }
@@ -1554,16 +1556,29 @@ input:focus {
     outline: none;
     width: 60%;
     margin: auto;
-  }
-  
-  #assPlano:hover {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
-  }
-  
-  #assPlano:active {
-    transform: translateY(-2px);
-  }
+}
 
+#assPlano:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+#assPlano:active {
+    transform: translateY(-2px);
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(95, 183, 95);
+    transform: scale(0.5);
+    box-shadow: 0px 5px 10px rgba(95, 183, 95, 0.274);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.3em;
+}
 /* Footer  */
 footer {
     background-color: var(--cor03);
