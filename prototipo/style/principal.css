@@ -1475,9 +1475,10 @@ input:focus {
 
 .planosBox {
     width: 100%;
-    padding: 20px;
+    padding: 20px 0px;
     min-height: 70vh;
     margin-top: 50px;
+    position: relative;
 }
 
 .planos {
@@ -1489,20 +1490,28 @@ input:focus {
     margin: 50px auto 0px;
 }
 
+#faixa{
+    width: 100%;
+    height: 30vh;
+    background-color: #323232;
+    position: absolute;
+    top: 40%;
+}
 
 
 
-#assina strong{
+.assina strong{
     margin-left: 15px;
     font-size: 1.5em;
 }
 /* assinaturas */
 
-#assina {
-    width: 30%;
-    height: 100%;
+
+.assina {
+    min-width: 30%;
+    height: 90%;
     --main-color: #323232;
-    --sub-color: #5b5b5b;
+    --sub-color: #696969;
     --accent-color: #242C88;
     position: relative;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -1515,8 +1524,17 @@ input:focus {
     transition: all 0.2s;
     box-shadow: 0px 0px 5px -1.5px #000;
 }
+#simes{
+    min-width: 35%;
+    height: 100%;
+    background-color: #dac7ac;
+  }
+  #anual{
+    padding: 10px;
+    gap: 5px;
+  }
 
-#assina::before {
+.assina::before {
     content: '';
     width: 99%;
     height: 99%;
@@ -1528,11 +1546,11 @@ input:focus {
     border-radius: 25px;
     transition: all 0.3s;
 }
-#assina:hover {
+.assina:hover {
     box-shadow: 0px 0px 20px -5px #000;
 }
 
-#assina:hover::before {
+.assina:hover::before {
     transform: rotate(10deg);
     box-shadow: 0px 0px 20px -5px #000;
 }
@@ -1564,6 +1582,33 @@ input:focus {
     transform: translateY(-2px);
   }
 
+  #circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(83, 170, 83);
+    box-shadow: 0px 5px 10px rgba(126, 213, 126, 0.297);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.5);
+}
+.incluid{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.incluid p{
+    margin: 0px;
+}
+.assina h4{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
 /* Footer  */
 footer {
     background-color: var(--cor03);
