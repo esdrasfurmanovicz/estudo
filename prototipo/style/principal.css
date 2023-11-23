@@ -208,7 +208,7 @@ h1 {
     text-align: center;
     padding-bottom: 20px;
     margin: 0px auto 20px;
-    font-family: var(--fonte-logo);
+    font-family: var(--fonte-inicial);
     border-bottom: 0.7px solid black;
 }
 
