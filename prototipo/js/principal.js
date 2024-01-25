@@ -1,4 +1,4 @@
-/*
+
 window.addEventListener('load', function() {
     // Simule um atraso de 2 segundos (2000 milissegundos) para a tela de carregamento.
     setTimeout(function() {
@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
         }, 500); // Tempo igual à duração da transição (0.5s).
     }, 2000);
 }); 
-*/
+
 /* Navegar até tal parte da pagina */
 function navigateToDestination(destino) {
     let i = document.querySelector(destino)

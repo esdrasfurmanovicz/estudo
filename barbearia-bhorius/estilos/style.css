@@ -74,7 +74,7 @@ li {
   padding: 5px;
 }
 
-a {
+nav a {
   font-size: 18px;
   color: black;
   font-weight: bold;
@@ -88,18 +88,18 @@ a {
   transition-property: color;
 }
 
-a:focus,
-a:hover {
+nav a:focus,
+nav a:hover {
   color: black;
 }
 
-a:focus:after,
-a:hover:after {
+nav a:focus:after,
+nav a:hover:after {
   width: 100%;
   left: 0%;
 }
 
-a:after {
+nav a:after {
   content: "";
   pointer-events: none;
   bottom: -1px;
