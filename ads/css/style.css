@@ -118,7 +118,7 @@ button:active {
 
 
 .sepr {
-    background: white url('img/lll.png') no-repeat center bottom;
+    background: white url('../img/lll.png') no-repeat center bottom;
     background-size: cover;
     min-height: 30vh;
     width: 100%;
@@ -173,7 +173,8 @@ h2 strong {
 
 .vant {
     min-height: 70vh;
-    background: black url('img/pexels.jpg') center center no-repeat fixed;
+    background: black center center no-repeat fixed;
+    background-image: url('../img/pexels.jpg');
     background-size: cover;
     color: white;
     padding: 50px 0px;
@@ -296,17 +297,17 @@ h2 strong {
 }
 
 #t1 {
-    background: white url('img/print01.png') no-repeat center bottom;
+    background: white url('../img/print01.png') no-repeat center bottom;
     background-size: cover;
 }
 
 #t2 {
-    background: white url('img/print02.png') no-repeat center center;
+    background: white url('../img/print02.png') no-repeat center center;
     background-size: cover;
 }
 
 #t3 {
-    background: white url('img/print03.png') no-repeat center bottom;
+    background: white url('../img/print03.png') no-repeat center bottom;
     background-size: cover;
 }
 
@@ -366,22 +367,22 @@ h2 strong {
 }
 
 #redon1 {
-    background: black url('img/person001.jpg') center center no-repeat;
+    background: black url('../img/person001.jpg') center center no-repeat;
     background-size: cover;
 }
 
 #redon2 {
-    background: black url('img/person002.jpg') center center no-repeat;
+    background: black url('../img/person002.jpg') center center no-repeat;
     background-size: cover;
 }
 
 #redon3 {
-    background: black url('img/person003.png') center center no-repeat;
+    background: black url('../img/person003.png') center center no-repeat;
     background-size: cover;
 }
 
 #redon4 {
-    background: black url('img/person004.jpg') center center no-repeat;
+    background: black url('../img/person004.jpg') center center no-repeat;
     background-size: cover;
 }
 
