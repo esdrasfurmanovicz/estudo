@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>andar teste</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            left: 0px;
+            top: 0;
+        }
+
+        .terra {
+            min-height: 20%;
+        }
+
+        .vazio {
+            height: 80%;
+            background-color: blue;
+        }
+
+        .chao {
+            background-color: brown;
+            min-height: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="vazio">
+        <div class="circle"></div>
+    </div>
+    <div class="terra">
+        <div class="chao"></div>
+    </div>
+    <script>
+        let dx, dy, px, py, vel, obj, tmp
+        function iniciar() {
+            dx = 0
+            dy = 0
+            px = 0
+            py = 0
+            vel = 20
+            obj = document.querySelector('.circle')
+            document.addEventListener("keydown", teclaDw)
+            document.addEventListener("keyup", teclaUp)
+            tmp = setInterval(enterFrame, 20)
+        }
+        function teclaDw() {
+            var tecla = event.keyCode
+            if (tecla == 68) {
+                dx = 1
+            } else if (tecla == 65) {
+                dx = -1
+            } else if (tecla == 32) { // Space bar for jump
+                if (py === 0) { // Only allow jumping if on the ground
+                    dy = -15
+                }
+            }
+        }
+        function teclaUp() {
+            var tecla = event.keyCode
+            if (tecla == 68) {
+                dx = 0
+            } else if (tecla == 65) {
+                dx = 0
+            }
+        }
+        function enterFrame() {
+            px += dx * vel;
+            py += dy * vel;
+            dy += 1; // Gravity
+            if (px < 0) {
+                px = 0;
+            } else if (px + obj.offsetWidth > window.innerWidth) {
+                px = window.innerWidth - obj.offsetWidth;
+            }
+            if (py < 0) {
+                py = 0;
+            } else if (py + obj.offsetHeight > window.innerHeight) {
+                py = window.innerHeight - obj.offsetHeight;
+            }
+            obj.style.left = px + 'px';
+            obj.style.top =  py + 'px' ;
+        }
+        window.addEventListener("load", iniciar)
+    </script>
+</body>
+
+</html>
