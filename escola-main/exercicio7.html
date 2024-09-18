@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página HTML com JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #000000;
+        }
+
+        h1 {
+            color: hsl(0, 100%, 98%);
+            font-family: 'Dancing Script', cursive;
+        }
+h2{
+   color: #fff;
+}
+        label {
+            font-weight: bold;
+            color:#fff
+
+            
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            background-color: #ff0077;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 10px;
+            background-color: #fff;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exemplo de Página HTML com JavaScript</h1>
+
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome" placeholder="Seu nome">
+    <button id="meuBotao">Clique-me!</button>
+    <button id="limparBotao">Limpar</button>
+
+    <p id="minhaMensagem"></p>
+
+    <h2>Nomes digitados:</h2>
+    <ul id="nomesDigitados"></ul>
+    <img
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/902827f1-23ee-484f-b383-5ba4988de668/dfac0cb-14ed0346-7fa8-46c8-96d2-5a7e36bb3b21.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkwMjgyN2YxLTIzZWUtNDg0Zi1iMzgzLTViYTQ5ODhkZTY2OFwvZGZhYzBjYi0xNGVkMDM0Ni03ZmE4LTQ2YzgtOTZkMi01YTdlMzZiYjNiMjEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.a22UOcdpyOQlrBwbO47uTy6j8iATssGMgNBRKYVCXn4">
+    <script>
+        document.getElementById("meuBotao").addEventListener("click", function () {
+            const nome = document.getElementById("nome").value;
+
+            if (nome) {
+
+                document.getElementById("minhaMensagem").innerHTML = "Olá, " + nome + "!";
+
+
+                const listaNomes = document.getElementById("nomesDigitados");
+
+
+                const li = document.createElement("li");
+
+
+                li.appendChild(document.createTextNode(nome));
+
+
+                listaNomes.appendChild(li);
+            } else {
+
+                document.getElementById("minhaMensagem").innerHTML = "Por favor, digite seu nome.";
+            }
+        });
+
+
+        document.getElementById("limparBotao").addEventListener("click", function () {
+
+            document.getElementById("nome").value = "";
+
+
+            document.getElementById("minhaMensagem").innerHTML = "";
+
+
+            document.getElementById("nomesDigitados").innerHTML = "";
+        });
+
+    </script>
+</body>
+
+</html>
