@@ -1,0 +1,66 @@
+
+main{
+    margin: auto;
+    margin-top: 5vh;
+    width: 80vw;
+}
+
+.hedPerfil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 35%;
+}
+.ftName{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.ftPerfil{
+    width: 100%;
+    max-width: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.nome, .sobrenome{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.editarSvg{
+    width: 25px;
+    color: rgb(34, 34, 34);
+}
+.addSvg{
+    width: 25px;
+}
+.fotoPerfil{
+    width: 70px;
+}
+.bioPerfil{
+    margin-top: 2vh;
+}
+.bioPerfil h3{
+    font-size: 1.5em;
+    font-weight: bold
+}
+.bioPerfil p{
+    font-size: 1.2em;
+    width: 70%;
+}
+
+.username{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.hPost{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.3em;
+}
+

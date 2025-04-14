@@ -1,0 +1,174 @@
+
+.salvar{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(121, 226, 121);
+    color: black;
+    font-size: 1.2em;
+    padding: 7px;
+    cursor: pointer;
+}
+#savePass{
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+.passBlock{
+    width: 50%;
+    padding: 0px 10px;
+}
+.bio, .bio:hover{
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    outline: none;
+    background-color: none;
+    resize: none;
+    width: 70%;
+    font-weight: bold;
+    padding: 7px;
+}
+.bio:focus{
+    border: 1px solid gray;
+}
+.usN input, .usN select, .outrosCampos input, .outrosCampos button{
+    display: block;
+    width: 400px;
+}
+.dados{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+label{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+input, input:hover{
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    outline: none;
+}
+input:focus{
+    border: 1px solid gray;
+}
+#senha, #repSenha{
+    width: 100%;
+}
+.ftName input{
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100px;
+}
+select, .altSenha{
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    transition: 0.3s;
+}
+.altSenha{
+    margin-top: 20px;
+}
+.altSenha a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.altSenha:hover{
+    background-color: rgba(140, 0, 255, 0.605);
+    cursor: pointer;
+}
+main{
+    margin-bottom: 50px;
+}
+
+.voltar{
+    padding: 7px;
+    border-radius: 5px;
+    background-color: gray;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
+
+.voltar a{
+    color: white;
+    text-decoration: none;
+}
+.senha, .senha:hover, .senha:focus{
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1.3em;
+    padding: 5px;
+}
+.pass{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form{
+
+    margin: auto;
+    margin-top: 50px;
+    width: 70%;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.popUp{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.26);
+    
+    align-items: center;
+    justify-content: center;
+}
+
+#pu{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.432);
+    padding: 20px 30px;
+}
+#pu p{
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+#pu input{
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+#ta{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 70%;
+}
+#cancelar, #salvar{
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2em;
+}
+#cancelar{background-color: rgb(92, 92, 92);}
+#salvar{background-color: rgb(0, 185, 0);}
+
