@@ -1,2 +1,2 @@
-<h1>ESDRAS FURMANOVICZ</h1>
-<p>Decidi criar este portfolio para poder compartilhar um pouco mais sobre a minha vida profissional, de como foi minha evolução como Desenvolvedor Web com diversos projetos<p>
+# projetos
+ Diversos projetos em HTML, CSS e JS. As ideias dos projetos foram tiradas dos cursos do canal Curso em Video, do curso de Desenvolvimento de Sistemas, e alguns da internet no geral
